@@ -1,0 +1,130 @@
+:root {
+    --bg: #323437;
+    --text: #646669;
+    --primary: #e2b714; /* Yellow accent */
+    --correct: #d1d0c5;
+    --incorrect: #ca4754;
+    --border: #444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    text-align: left;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary);
+    text-transform: lowercase;
+}
+
+.stats {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.stat .label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.stat p {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.typing-area {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    position: relative;
+    user-select: none;
+    margin-bottom: 3rem;
+    min-height: 150px;
+    cursor: text;
+}
+
+.typing-area span {
+    position: relative;
+}
+
+.typing-area span.correct {
+    color: var(--correct);
+}
+
+.typing-area span.incorrect {
+    color: var(--incorrect);
+    background-color: rgba(202, 71, 84, 0.2);
+}
+
+.typing-area span.active {
+    color: var(--correct);
+}
+
+.typing-area span.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 2px;
+    height: 1.2em;
+    background-color: var(--primary);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.input-field {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.restart-btn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.restart-btn:hover {
+    background-color: var(--border);
+    color: var(--correct);
+}
+
+.project-footer {
+    margin-top: 4rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+}
