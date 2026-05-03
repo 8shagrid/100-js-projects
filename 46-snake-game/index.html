@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game - Project 46</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Neon Snake</h1>
+        <div class="game-info">
+            <div class="score">Skor: <span id="score-val">0</span></div>
+            <div class="high-score">Tertinggi: <span id="high-score-val">0</span></div>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="game-canvas" width="400" height="400"></canvas>
+            <div id="game-over" class="overlay">
+                <div>
+                    <h2>Game Over!</h2>
+                    <button id="restart-btn">Main Lagi</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls-hint">Gunakan Tombol Panah (Arrow Keys) untuk bergerak</div>
+
+        <footer class="project-footer">
+            Project 46 / 100 &mdash; Snake Game
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
