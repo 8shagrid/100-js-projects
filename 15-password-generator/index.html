@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator - Project 15</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        
+        <div class="result-container">
+            <span id="result">P4ssw0rd!</span>
+            <button class="btn-copy" id="clipboard" title="Copy to clipboard">📋</button>
+        </div>
+        
+        <div class="settings">
+            <div class="setting">
+                <label>Panjang Password (<span id="length-val">12</span>)</label>
+                <input type="range" id="length" min="8" max="32" value="12">
+            </div>
+            <div class="setting">
+                <label>Sertakan Huruf Besar</label>
+                <input type="checkbox" id="uppercase" checked>
+            </div>
+            <div class="setting">
+                <label>Sertakan Huruf Kecil</label>
+                <input type="checkbox" id="lowercase" checked>
+            </div>
+            <div class="setting">
+                <label>Sertakan Angka</label>
+                <input type="checkbox" id="numbers" checked>
+            </div>
+            <div class="setting">
+                <label>Sertakan Simbol</label>
+                <input type="checkbox" id="symbols" checked>
+            </div>
+        </div>
+
+        <button class="btn-large" id="generate">Generate Password</button>
+
+        <footer class="project-footer">
+            Project 15 / 100 &mdash; Password Generator
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

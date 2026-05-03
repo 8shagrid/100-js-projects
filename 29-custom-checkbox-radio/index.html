@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Checkbox & Radio - Project 29</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Custom Inputs</h1>
+        <p>Pilih preferensi Anda di bawah ini:</p>
+        
+        <form id="custom-form">
+            <div class="form-group">
+                <h3>Keahlian (Checkbox)</h3>
+                <div class="options">
+                    <label class="custom-control checkbox">
+                        <input type="checkbox" name="skills" value="HTML">
+                        <span class="control-indicator"></span>
+                        HTML
+                    </label>
+                    <label class="custom-control checkbox">
+                        <input type="checkbox" name="skills" value="CSS">
+                        <span class="control-indicator"></span>
+                        CSS
+                    </label>
+                    <label class="custom-control checkbox">
+                        <input type="checkbox" name="skills" value="JavaScript">
+                        <span class="control-indicator"></span>
+                        JavaScript
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <h3>Level (Radio)</h3>
+                <div class="options">
+                    <label class="custom-control radio">
+                        <input type="radio" name="level" value="Beginner">
+                        <span class="control-indicator"></span>
+                        Beginner
+                    </label>
+                    <label class="custom-control radio">
+                        <input type="radio" name="level" value="Intermediate">
+                        <span class="control-indicator"></span>
+                        Intermediate
+                    </label>
+                    <label class="custom-control radio">
+                        <input type="radio" name="level" value="Advanced">
+                        <span class="control-indicator"></span>
+                        Advanced
+                    </label>
+                </div>
+            </div>
+
+            <div class="result" id="result">
+                <p><strong>Keahlian:</strong> <span id="skills-list">Belum ada</span></p>
+                <p><strong>Level:</strong> <span id="level-selected">Belum dipilih</span></p>
+            </div>
+        </form>
+
+        <footer class="project-footer">
+            Project 29 / 100 &mdash; Custom Checkbox & Radio
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

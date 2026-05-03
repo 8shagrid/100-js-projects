@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator - Project 18</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tip Calculator</h1>
+        <p>Hitung tip dan bagi tagihan dengan mudah:</p>
+        
+        <div class="input-group">
+            <label for="bill">Total Tagihan (Rp):</label>
+            <input type="number" id="bill" placeholder="Contoh: 150000">
+        </div>
+        
+        <div class="input-group">
+            <label for="tip">Persentase Tip (%):</label>
+            <select id="tip">
+                <option value="5">5%</option>
+                <option value="10" selected>10%</option>
+                <option value="15">15%</option>
+                <option value="20">20%</option>
+                <option value="25">25%</option>
+            </select>
+        </div>
+        
+        <div class="input-group">
+            <label for="people">Jumlah Orang:</label>
+            <input type="number" id="people" value="1" min="1">
+        </div>
+        
+        <button class="btn" id="calculate">Hitung Tip</button>
+        
+        <div class="result-box" id="result-box">
+            <div class="result-item">
+                <span>Tip (Total):</span>
+                <h3 id="tip-amount">Rp 0</h3>
+            </div>
+            <div class="result-item">
+                <span>Total per Orang:</span>
+                <h3 id="total-per-person">Rp 0</h3>
+            </div>
+        </div>
+
+        <footer class="project-footer">
+            Project 18 / 100 &mdash; Tip Calculator
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

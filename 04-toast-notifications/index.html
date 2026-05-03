@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Notifications - Project 04</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Toast Notifications</h1>
+            <p>Klik tombol untuk memunculkan notifikasi.</p>
+        </header>
+
+        <div class="buttons-grid">
+            <button class="btn btn-success" onclick="showToast('success', '✓ Berhasil!')">
+                Success
+            </button>
+            <button class="btn btn-error" onclick="showToast('error', '✕ Terjadi kesalahan!')">
+                Error
+            </button>
+            <button class="btn btn-info" onclick="showToast('info', 'ℹ Info terbaru.')">
+                Info
+            </button>
+            <button class="btn btn-warning" onclick="showToast('warning', '⚠ Peringatan!')">
+                Warning
+            </button>
+        </div>
+
+        <footer class="project-footer">
+            Project 04 / 100 &mdash; Toast Notifications
+        </footer>
+    </div>
+
+    <!-- Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

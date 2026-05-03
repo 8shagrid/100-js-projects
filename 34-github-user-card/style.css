@@ -1,0 +1,154 @@
+:root {
+    --bg: #141d26;
+    --card-bg: #1b2730;
+    --primary: #2ecc71;
+    --secondary: #3498db;
+    --text: #fff;
+    --text-muted: #8899a6;
+    --border: #2c3e50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+}
+
+.search-form {
+    margin-bottom: 2rem;
+}
+
+#username-input {
+    width: 100%;
+    background-color: var(--card-bg);
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 1.1rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+#username-input::placeholder {
+    color: var(--text-muted);
+}
+
+.user-card {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    padding: 3rem;
+    display: flex;
+    gap: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--border);
+    object-fit: cover;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-info h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.user-info p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stats .item {
+    font-size: 0.95rem;
+}
+
+.stats span {
+    font-weight: bold;
+    color: var(--primary);
+    margin-right: 5px;
+}
+
+.repos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.repo-tag {
+    background-color: var(--bg);
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.repo-tag:hover {
+    background-color: var(--secondary);
+}
+
+.error-card {
+    text-align: center;
+    padding: 2rem;
+}
+
+.project-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .user-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+    }
+    .stats {
+        justify-content: center;
+    }
+    .repos {
+        justify-content: center;
+    }
+}

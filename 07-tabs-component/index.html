@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs Component - Project 07</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tabbed Navigation</h1>
+        
+        <div class="tabs-container">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-target="tab1">Beranda</button>
+                <button class="tab-btn" data-target="tab2">Profil</button>
+                <button class="tab-btn" data-target="tab3">Pengaturan</button>
+            </div>
+            
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab1">
+                    <h2>Beranda</h2>
+                    <p>Selamat datang di dashboard Anda. Di sini Anda dapat melihat ringkasan aktivitas terbaru.</p>
+                </div>
+                <div class="tab-pane" id="tab2">
+                    <h2>Profil</h2>
+                    <p>Kelola informasi pribadi Anda, termasuk nama, email, dan foto profil di sini.</p>
+                </div>
+                <div class="tab-pane" id="tab3">
+                    <h2>Pengaturan</h2>
+                    <p>Sesuaikan preferensi sistem, notifikasi, dan opsi privasi akun Anda.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="project-footer">
+            Project 07 / 100 &mdash; Tabs Component
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
