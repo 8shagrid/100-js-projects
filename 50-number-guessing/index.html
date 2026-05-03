@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game - Project 50</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Number Guessing</h1>
+        <p>Saya telah memilih angka antara 1 sampai 100. Bisakah Anda menebaknya?</p>
+
+        <div class="game-card">
+            <div id="message" class="message">Mulai menebak...</div>
+            
+            <div class="input-group">
+                <input type="number" id="guess-input" placeholder="00" min="1" max="100">
+                <button id="guess-btn">Tebak</button>
+            </div>
+
+            <div class="stats">
+                Percobaan: <span id="attempts">0</span>
+            </div>
+
+            <div class="history-container">
+                <div class="label">Tebakan sebelumnya:</div>
+                <div id="history" class="history"></div>
+            </div>
+
+            <button id="restart-btn" class="restart-btn">Main Lagi</button>
+        </div>
+
+        <footer class="project-footer">
+            Project 50 / 100 &mdash; Number Guessing
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

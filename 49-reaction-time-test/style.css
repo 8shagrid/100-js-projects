@@ -1,0 +1,88 @@
+:root {
+    --idle-bg: #2b87d1;
+    --waiting-bg: #ce263c;
+    --ready-bg: #4bdb66;
+    --text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+    user-select: none;
+}
+
+.game-area.idle { background-color: var(--idle-bg); }
+.game-area.waiting { background-color: var(--waiting-bg); }
+.game-area.ready { background-color: var(--ready-bg); }
+.game-area.result { background-color: var(--idle-bg); }
+
+.content {
+    text-align: center;
+    pointer-events: none;
+}
+
+.icon {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.stats {
+    background-color: #222;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #888;
+}
+
+#best-time {
+    color: var(--ready-bg);
+}
+
+.project-footer {
+    position: absolute;
+    bottom: 4rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+}
