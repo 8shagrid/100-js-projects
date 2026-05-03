@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-step Form - Project 24</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pendaftaran Akun</h1>
+        
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+            <div class="step-dot active">1</div>
+            <div class="step-dot">2</div>
+            <div class="step-dot">3</div>
+        </div>
+
+        <form id="multi-step-form">
+            <!-- Step 1 -->
+            <div class="form-step active" id="step-1">
+                <h3>Informasi Pribadi</h3>
+                <div class="input-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" placeholder="Masukkan nama Anda">
+                </div>
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="contoh@mail.com">
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="form-step" id="step-2">
+                <h3>Detail Akun</h3>
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" placeholder="Pilih username">
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Buat kata sandi">
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="form-step" id="step-3">
+                <h3>Konformasi</h3>
+                <p>Silakan tinjau kembali data Anda sebelum mengirimkan formulir.</p>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">Saya setuju dengan syarat dan ketentuan.</label>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn back" id="back-btn" disabled>Kembali</button>
+                <button type="button" class="btn next" id="next-btn">Lanjut</button>
+            </div>
+        </form>
+
+        <footer class="project-footer">
+            Project 24 / 100 &mdash; Multi-step Form
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

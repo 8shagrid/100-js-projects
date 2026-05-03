@@ -1,0 +1,102 @@
+:root {
+    --bg: #f5f6fa;
+    --card-bg: #fff;
+    --primary: #3498db;
+    --text: #2f3640;
+    --border: #dcdde1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.otp-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+.otp-container input {
+    width: 45px;
+    height: 55px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.otp-container input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.2);
+}
+
+.verify-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.verify-btn:hover {
+    opacity: 0.9;
+}
+
+.project-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    font-size: 0.8rem;
+    color: #bdc3c7;
+}
+
+@media (max-width: 400px) {
+    .otp-container input {
+        width: 35px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}

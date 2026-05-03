@@ -1,0 +1,130 @@
+:root {
+    --bg: #f5f6fa;
+    --card-bg: #fff;
+    --primary: #27ae60;
+    --text: #2f3640;
+    --border: #dcdde1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.converter-card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+p {
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.flex-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    flex: 1;
+    text-align: left;
+}
+
+.form-control label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-control input, .form-control select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-control input:focus, .form-control select:focus {
+    border-color: var(--primary);
+}
+
+.swap-btn {
+    background: #f1f2f6;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.swap-btn:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.result-area {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+#rate-text {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+#total-text {
+    font-size: 2rem;
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.project-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    font-size: 0.8rem;
+    color: #bdc3c7;
+    text-align: center;
+}

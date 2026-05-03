@@ -1,0 +1,159 @@
+:root {
+    --bg: #f5f6fa;
+    --card-bg: #fff;
+    --primary: #3498db;
+    --text: #2f3640;
+    --border: #dcdde1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.form-group h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Custom Control Styles */
+.custom-control {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 1rem;
+    user-select: none;
+    display: inline-block;
+}
+
+.custom-control input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.control-indicator {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 22px;
+    width: 22px;
+    background-color: #eee;
+    border: 2px solid var(--border);
+    transition: all 0.2s;
+}
+
+.checkbox .control-indicator {
+    border-radius: 4px;
+}
+
+.radio .control-indicator {
+    border-radius: 50%;
+}
+
+.custom-control:hover input ~ .control-indicator {
+    background-color: #ccc;
+}
+
+.custom-control input:checked ~ .control-indicator {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.control-indicator:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-control input:checked ~ .control-indicator:after {
+    display: block;
+}
+
+/* Checkbox Mark */
+.checkbox .control-indicator:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Radio Dot */
+.radio .control-indicator:after {
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.result {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.result p {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.project-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    font-size: 0.8rem;
+    color: #bdc3c7;
+}

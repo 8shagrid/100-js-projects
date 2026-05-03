@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Project 32</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Masukkan nama kota..." autocomplete="off">
+            <button id="search-btn">Cari</button>
+        </div>
+
+        <div id="weather-card" class="weather-card" style="display: none;">
+            <h2 id="city-name">Jakarta</h2>
+            <div class="weather-info">
+                <span id="weather-icon" class="weather-icon">☀️</span>
+                <h1 id="temp">28°C</h1>
+                <p id="description">Cerah</p>
+            </div>
+            <div class="details">
+                <div class="col">
+                    <span class="label">Kelembapan</span>
+                    <p id="humidity">70%</p>
+                </div>
+                <div class="col">
+                    <span class="label">Angin</span>
+                    <p id="wind">10 km/h</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="status-msg" class="status-msg">Cari kota untuk melihat cuaca</div>
+
+        <footer class="project-footer">
+            Project 32 / 100 &mdash; Weather App
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

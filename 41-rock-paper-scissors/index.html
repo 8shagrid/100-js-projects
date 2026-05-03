@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors - Project 41</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        
+        <div class="scoreboard">
+            <div class="score">
+                <span class="label">Pemain</span>
+                <p id="user-score">0</p>
+            </div>
+            <div class="divider">:</div>
+            <div class="score">
+                <span class="label">Komputer</span>
+                <p id="comp-score">0</p>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="result-display" id="result-text">Pilih senjata Anda!</div>
+            
+            <div class="choices-visual">
+                <div class="choice-preview">
+                    <span>Pemain</span>
+                    <div id="user-choice-icon" class="icon">?</div>
+                </div>
+                <div class="vs">VS</div>
+                <div class="choice-preview">
+                    <span>Komputer</span>
+                    <div id="comp-choice-icon" class="icon">?</div>
+                </div>
+            </div>
+
+            <div class="buttons-group">
+                <button class="choice-btn" data-choice="rock">🪨 Batu</button>
+                <button class="choice-btn" data-choice="paper">📄 Kertas</button>
+                <button class="choice-btn" data-choice="scissors">✂️ Gunting</button>
+            </div>
+
+            <button id="reset-btn" class="reset-btn">Reset Skor</button>
+        </div>
+
+        <footer class="project-footer">
+            Project 41 / 100 &mdash; Rock Paper Scissors
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

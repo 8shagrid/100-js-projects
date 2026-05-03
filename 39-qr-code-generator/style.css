@@ -1,0 +1,132 @@
+:root {
+    --bg: #f4f7f6;
+    --card-bg: #fff;
+    --primary: #27ae60;
+    --secondary: #2c3e50;
+    --text: #333;
+    --text-muted: #7f8c8d;
+    --border: #dcdde1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.qr-card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    margin-bottom: 2rem;
+}
+
+#qr-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#qr-input:focus {
+    border-color: var(--primary);
+}
+
+.qr-display {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    min-height: 200px;
+    border: 2px dashed #eee;
+}
+
+.qr-display img {
+    max-width: 100% !important;
+}
+
+.action-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn.primary {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.btn.primary:hover:not(:disabled) {
+    background-color: #219150;
+}
+
+.btn.secondary {
+    background-color: var(--secondary);
+    color: #fff;
+}
+
+.btn.secondary:hover:not(:disabled) {
+    background-color: #1a252f;
+}
+
+.project-footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-align: center;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Preview - Project 28</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Foto</h1>
+        <p>Pilih atau tarik foto Anda ke area di bawah ini:</p>
+        
+        <div class="upload-area" id="upload-area">
+            <input type="file" id="file-input" accept="image/*" hidden>
+            <div class="prompt" id="prompt">
+                <span class="icon">📁</span>
+                <p>Klik atau Tarik Foto di Sini</p>
+                <span>Format: JPG, PNG, GIF</span>
+            </div>
+            <div class="preview-container" id="preview-container" style="display: none;">
+                <img id="image-preview" src="" alt="Preview">
+                <button class="remove-btn" id="remove-btn" title="Hapus Foto">&times;</button>
+            </div>
+        </div>
+
+        <button class="submit-btn" id="submit-btn" disabled>Kirim Foto</button>
+
+        <footer class="project-footer">
+            Project 28 / 100 &mdash; File Upload Preview
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

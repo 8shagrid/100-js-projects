@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator - Project 39</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- QRCode.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="qr-card">
+            <h1>QR Code Generator</h1>
+            <p>Ubah teks atau URL menjadi kode QR secara instan.</p>
+
+            <div class="input-group">
+                <input type="text" id="qr-input" placeholder="Masukkan teks atau URL..." autocomplete="off">
+            </div>
+
+            <div id="qr-display" class="qr-display">
+                <!-- QR Code generated here -->
+            </div>
+
+            <div class="action-group">
+                <button id="generate-btn" class="btn primary">Generate QR</button>
+                <button id="download-btn" class="btn secondary" disabled>Download PNG</button>
+            </div>
+        </div>
+
+        <footer class="project-footer">
+            Project 39 / 100 &mdash; QR Code Generator
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

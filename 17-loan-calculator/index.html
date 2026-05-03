@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator - Project 17</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Loan Calculator</h1>
+        <p>Hitung angsuran bulanan pinjaman Anda:</p>
+        
+        <div class="input-group">
+            <label for="amount">Jumlah Pinjaman (Rp):</label>
+            <input type="number" id="amount" placeholder="Contoh: 10000000">
+        </div>
+        
+        <div class="input-group">
+            <label for="interest">Bunga per Tahun (%):</label>
+            <input type="number" id="interest" placeholder="Contoh: 10">
+        </div>
+        
+        <div class="input-group">
+            <label for="months">Tenor (Bulan):</label>
+            <input type="number" id="months" placeholder="Contoh: 12">
+        </div>
+        
+        <button class="btn" id="calculate">Hitung Angsuran</button>
+        
+        <div class="result-box" id="result-box">
+            <p>Angsuran Bulanan Anda:</p>
+            <h2 id="payment">Rp 0</h2>
+        </div>
+
+        <footer class="project-footer">
+            Project 17 / 100 &mdash; Loan Calculator
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

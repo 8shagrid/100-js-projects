@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Picker - Project 30</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Date Picker</h1>
+        <p>Pilih tanggal di bawah ini:</p>
+        
+        <div class="datepicker-wrapper">
+            <input type="text" id="date-input" placeholder="Pilih Tanggal" readonly>
+            <div class="calendar" id="calendar">
+                <div class="calendar-header">
+                    <button id="prev-btn">&lt;</button>
+                    <h3 id="month-year">Maret 2026</h3>
+                    <button id="next-btn">&gt;</button>
+                </div>
+                <div class="calendar-weekdays">
+                    <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
+                </div>
+                <div class="calendar-days" id="calendar-days">
+                    <!-- Days will be populated by JS -->
+                </div>
+            </div>
+        </div>
+
+        <footer class="project-footer">
+            Project 30 / 100 &mdash; Date Picker
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
