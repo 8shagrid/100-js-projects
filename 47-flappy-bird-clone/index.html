@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird Clone - Project 47</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="score-container">Skor: <span id="score-val">0</span></div>
+        
+        <div class="canvas-wrapper">
+            <canvas id="game-canvas" width="320" height="480"></canvas>
+            <div id="start-screen" class="overlay">
+                <div>
+                    <h1>Flappy Bird</h1>
+                    <p>Klik atau tekan SPASI untuk terbang</p>
+                    <button id="start-btn">Mulai Game</button>
+                </div>
+            </div>
+            <div id="game-over" class="overlay">
+                <div>
+                    <h2>Game Over!</h2>
+                    <p>Skor Anda: <span id="final-score">0</span></p>
+                    <button id="restart-btn">Main Lagi</button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="project-footer">
+            Project 47 / 100 &mdash; Flappy Bird Clone
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
