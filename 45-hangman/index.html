@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman - Project 45</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hangman</h1>
+        <p>Tebak katanya sebelum orangnya digantung!</p>
+
+        <div class="game-container">
+            <svg height="250" width="200" class="hangman-visual">
+                <!-- Tiang -->
+                <line x1="60" y1="20" x2="140" y2="20" />
+                <line x1="140" y1="20" x2="140" y2="50" />
+                <line x1="60" y1="20" x2="60" y2="230" />
+                <line x1="20" y1="230" x2="100" y2="230" />
+
+                <!-- Bagian Tubuh -->
+                <circle cx="140" cy="70" r="20" class="figure-part" /> <!-- Kepala -->
+                <line x1="140" y1="90" x2="140" y2="150" class="figure-part" /> <!-- Badan -->
+                <line x1="140" y1="120" x2="120" y2="100" class="figure-part" /> <!-- Tangan Kiri -->
+                <line x1="140" y1="120" x2="160" y2="100" class="figure-part" /> <!-- Tangan Kanan -->
+                <line x1="140" y1="150" x2="120" y2="180" class="figure-part" /> <!-- Kaki Kiri -->
+                <line x1="140" y1="150" x2="160" y2="180" class="figure-part" /> <!-- Kaki Kanan -->
+            </svg>
+
+            <div class="word-display" id="word-display"></div>
+            
+            <div class="keyboard" id="keyboard">
+                <!-- Buttons will be generated here -->
+            </div>
+        </div>
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <h2 id="final-msg"></h2>
+                <p id="word-reveal"></p>
+                <button id="play-again">Main Lagi</button>
+            </div>
+        </div>
+
+        <footer class="project-footer">
+            Project 45 / 100 &mdash; Hangman
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
