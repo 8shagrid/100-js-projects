@@ -1,0 +1,107 @@
+:root {
+    --bg: #fdfdfd;
+    --clock-bg: #ffffff;
+    --primary: #2d3436;
+    --accent: #e74c3c; /* Red for second hand */
+    --text: #636e72;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    background-color: var(--clock-bg);
+    border-radius: 50%;
+    border: 10px solid var(--primary);
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    border-radius: 10px;
+    z-index: 5;
+}
+
+.hour {
+    width: 8px;
+    height: 65px;
+    background-color: var(--primary);
+    margin-left: -4px;
+}
+
+.min {
+    width: 5px;
+    height: 90px;
+    background-color: var(--primary);
+    margin-left: -2.5px;
+}
+
+.sec {
+    width: 2px;
+    height: 110px;
+    background-color: var(--accent);
+    margin-left: -1px;
+    transition: transform 0.1s cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.center-pin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+/* Markers */
+.number {
+    position: absolute;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--primary);
+}
+
+.n12 { top: 20px; left: 50%; transform: translateX(-50%); }
+.n3 { right: 20px; top: 50%; transform: translateY(-50%); }
+.n6 { bottom: 20px; left: 50%; transform: translateX(-50%); }
+.n9 { left: 20px; top: 50%; transform: translateY(-50%); }
+
+.digital-time {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 2px;
+}
+
+.project-footer {
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    color: #bdc3c7;
+}
