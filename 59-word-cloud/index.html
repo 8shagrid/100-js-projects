@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Cloud - Project 59</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Word Cloud Generator</h1>
+        <p>Tempelkan teks Anda di bawah untuk melihat frekuensi kata</p>
+
+        <div class="input-section">
+            <textarea id="text-input" placeholder="Masukkan teks panjang di sini...">JavaScript adalah bahasa pemrograman tingkat tinggi dan dinamis. JavaScript populer digunakan di web, bersama dengan HTML dan CSS. JavaScript membuat halaman web menjadi interaktif. Banyak framework JavaScript seperti React, Vue, dan Angular yang membantu pengembang web.</textarea>
+            <button id="generate-btn">Buat Word Cloud</button>
+        </div>
+
+        <div class="cloud-wrapper">
+            <div id="cloud" class="cloud">
+                <!-- Words will be injected here -->
+            </div>
+        </div>
+
+        <footer class="project-footer">
+            Project 59 / 100 &mdash; Word Cloud
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

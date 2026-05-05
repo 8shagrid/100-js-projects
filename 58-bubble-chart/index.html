@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Chart - Project 58</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bubble Chart Generator</h1>
+        
+        <div class="dashboard">
+            <div class="sidebar">
+                <div class="card">
+                    <h3>Input Data</h3>
+                    <form id="bubble-form">
+                        <input type="text" id="label" placeholder="Label (mis: Project A)" required>
+                        <input type="number" id="pos-x" placeholder="Posisi X (0-100)" min="0" max="100" required>
+                        <input type="number" id="pos-y" placeholder="Posisi Y (0-100)" min="0" max="100" required>
+                        <input type="number" id="size" placeholder="Ukuran (10-100)" min="10" max="100" required>
+                        <button type="submit">Tambah Bubble</button>
+                    </form>
+                </div>
+
+                <div class="card data-card">
+                    <h3>Daftar Bubble</h3>
+                    <div id="data-list" class="data-list">
+                        <!-- Items will be listed here -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-area">
+                <div class="card chart-card">
+                    <div class="y-label">Y Axis</div>
+                    <svg id="chart" viewBox="0 0 500 500">
+                        <!-- Grid lines -->
+                        <line x1="0" y1="500" x2="500" y2="500" stroke="#ddd" />
+                        <line x1="0" y1="0" x2="0" y2="500" stroke="#ddd" />
+                        <!-- Bubbles will be injected here -->
+                    </svg>
+                    <div class="x-label">X Axis</div>
+                    
+                    <div id="tooltip" class="tooltip"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="project-footer">
+            Project 58 / 100 &mdash; Bubble Chart
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
