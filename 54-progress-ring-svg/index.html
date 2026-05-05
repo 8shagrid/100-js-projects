@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Ring SVG - Project 54</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="ring-container">
+            <svg class="progress-ring" width="220" height="220">
+                <circle
+                    class="progress-ring__background"
+                    stroke="#2c3e50"
+                    stroke-width="12"
+                    fill="transparent"
+                    r="90"
+                    cx="110"
+                    cy="110"
+                />
+                <circle
+                    id="progress-circle"
+                    class="progress-ring__circle"
+                    stroke="url(#gradient)"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                    fill="transparent"
+                    r="90"
+                    cx="110"
+                    cy="110"
+                />
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#00d2ff" />
+                        <stop offset="100%" stop-color="#3a7bd5" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            <div class="percentage">
+                <span id="percent-text">0</span>%
+            </div>
+        </div>
+
+        <div class="controls">
+            <label for="progress-slider">Set Progress:</label>
+            <input type="range" id="progress-slider" min="0" max="100" value="45">
+        </div>
+
+        <footer class="project-footer">
+            Project 54 / 100 &mdash; Progress Ring SVG
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
