@@ -1,0 +1,147 @@
+:root {
+    --thermometer-bg: #e0e0e0;
+    --glass-border: #bdc3c7;
+    --text: #2c3e50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.thermometer-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 20px 0;
+}
+
+.thermometer-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.scale {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #95a5a6;
+    padding-top: 5px; /* Align with tube top */
+}
+
+.thermometer {
+    position: relative;
+    width: 30px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tube {
+    width: 24px;
+    height: 300px;
+    background: var(--thermometer-bg);
+    border: 3px solid var(--glass-border);
+    border-radius: 12px 12px 0 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.mercury {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, #ff416c, #ff4b2b);
+    transition: height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.bulb {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border-radius: 50%;
+    margin-top: -10px;
+    border: 3px solid var(--glass-border);
+    z-index: 1;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 200px;
+}
+
+.temp-display {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text);
+}
+
+input[type="range"] {
+    cursor: pointer;
+    accent-color: #ff416c;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+p {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+}
+
+.project-footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    font-size: 0.8rem;
+    color: #bdc3c7;
+}
+
+@media (max-width: 480px) {
+    .thermometer-wrapper { flex-direction: column; }
+    .scale { left: -50px; }
+}

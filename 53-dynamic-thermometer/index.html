@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Thermometer - Project 53</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="bg">
+    <div class="container">
+        <h1>Termometer Dinamis</h1>
+        
+        <div class="thermometer-wrapper">
+            <div class="thermometer-container">
+                <div class="scale">
+                    <span>100°C</span>
+                    <span>80°C</span>
+                    <span>60°C</span>
+                    <span>40°C</span>
+                    <span>20°C</span>
+                    <span>0°C</span>
+                    <span>-20°C</span>
+                </div>
+                <div class="thermometer">
+                    <div class="tube">
+                        <div id="mercury" class="mercury"></div>
+                    </div>
+                    <div class="bulb"></div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="temp-display">
+                    <span id="temp-val">25</span>°C
+                </div>
+                <input type="range" id="temp-slider" min="-20" max="100" value="25">
+                <input type="number" id="temp-num" min="-20" max="100" value="25">
+                <p>Sesuaikan suhu di atas</p>
+            </div>
+        </div>
+
+        <footer class="project-footer">
+            Project 53 / 100 &mdash; Dynamic Thermometer
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
