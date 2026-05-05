@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 Tracker - Project 60</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Covid-19 Global Tracker</h1>
+            <div class="selection-box">
+                <select id="country-select">
+                    <option value="all">Seluruh Dunia (Global)</option>
+                    <!-- Country options will be injected here -->
+                </select>
+            </div>
+        </header>
+
+        <div id="loading" class="loading-overlay">
+            <div class="spinner"></div>
+            <p>Mengambil data terbaru...</p>
+        </div>
+
+        <div class="stats-grid" id="stats-grid">
+            <div class="card cases">
+                <h3>Total Kasus</h3>
+                <h2 id="total-cases">0</h2>
+                <p>+<span id="new-cases">0</span> Hari ini</p>
+            </div>
+            <div class="card active">
+                <h3>Kasus Aktif</h3>
+                <h2 id="active-cases">0</h2>
+                <p>Dalam perawatan</p>
+            </div>
+            <div class="card recovered">
+                <h3>Sembuh</h3>
+                <h2 id="recovered">0</h2>
+                <p>+<span id="new-recovered">0</span> Hari ini</p>
+            </div>
+            <div class="card deaths">
+                <h3>Meninggal</h3>
+                <h2 id="deaths">0</h2>
+                <p>+<span id="new-deaths">0</span> Hari ini</p>
+            </div>
+        </div>
+
+        <div id="error-msg" class="error-msg" style="display: none;">
+            Gagal mengambil data. Silakan periksa koneksi internet Anda.
+        </div>
+
+        <footer class="project-footer">
+            Project 60 / 100 &mdash; Covid Tracker (Data by disease.sh)
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
