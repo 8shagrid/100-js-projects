@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Chart from CSV - Project 51</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Visualisasi Data CSV</h1>
+        <p>Masukkan data CSV (Format: Label, Nilai)</p>
+
+        <div class="input-section">
+            <textarea id="csv-input" placeholder="Januari, 45&#10;Februari, 80&#10;Maret, 60...">Senin, 120
+Selasa, 150
+Rabu, 180
+Kamis, 140
+Jumat, 200
+Sabtu, 170
+Minggu, 130</textarea>
+            <button id="generate-btn">Generate Chart</button>
+        </div>
+
+        <div class="chart-container">
+            <div id="chart" class="chart">
+                <!-- Bars will be generated here -->
+            </div>
+            <div class="y-axis-label">Nilai</div>
+            <div class="x-axis-label">Kategori</div>
+        </div>
+
+        <footer class="project-footer">
+            Project 51 / 100 &mdash; Bar Chart from CSV
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

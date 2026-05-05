@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie Chart Expenses - Project 52</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        
+        <div class="main-layout">
+            <div class="left-panel">
+                <div class="card">
+                    <h3>Tambah Pengeluaran</h3>
+                    <form id="expense-form">
+                        <input type="text" id="category" placeholder="Kategori (mis: Makan)" required>
+                        <input type="number" id="amount" placeholder="Jumlah (Rp)" required>
+                        <button type="submit">Tambah</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3>Daftar Pengeluaran</h3>
+                    <div id="expense-list" class="expense-list">
+                        <!-- Expenses will appear here -->
+                    </div>
+                    <div class="total-display">
+                        Total: <span id="total-amount">Rp 0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="card chart-card">
+                    <h3>Visualisasi</h3>
+                    <div class="chart-box">
+                        <svg id="pie-chart" viewBox="0 0 100 100">
+                            <!-- Pie segments will be generated here -->
+                        </svg>
+                        <div id="empty-msg" class="empty-msg">Belum ada data</div>
+                    </div>
+                    <div id="legend" class="legend">
+                        <!-- Legend items will appear here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="project-footer">
+            Project 52 / 100 &mdash; Pie Chart Expenses
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
