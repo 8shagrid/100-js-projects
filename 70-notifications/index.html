@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Notifications - Project 70</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Notifikasi Sistem</h1>
+            <p>Kirim pemberitahuan langsung ke desktop Anda</p>
+        </header>
+
+        <div id="permission-card" class="card status-card">
+            <div class="status-wrap">
+                <div id="status-icon" class="status-dot"></div>
+                <span id="status-text">Mengecek izin...</span>
+            </div>
+            <button id="request-btn" class="btn secondary">Minta Izin</button>
+        </div>
+
+        <div class="card composer-card">
+            <div class="input-group">
+                <label for="notif-title">Judul Notifikasi</label>
+                <input type="text" id="notif-title" placeholder="Contoh: Pesan Baru" value="Halo dari SuperApp!">
+            </div>
+            <div class="input-group">
+                <label for="notif-body">Isi Pesan</label>
+                <textarea id="notif-body" placeholder="Tulis pesan Anda di sini...">Ini adalah notifikasi sistem yang dikirim melalui browser Anda.</textarea>
+            </div>
+
+            <div class="actions">
+                <button id="send-btn" class="btn primary">Kirim Sekarang</button>
+                <button id="delay-btn" class="btn outline">Tunda 5 Detik</button>
+            </div>
+        </div>
+
+        <footer class="project-footer">
+            Project 70 / 100 &mdash; Web Notifications API
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
