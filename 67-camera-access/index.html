@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Camera - Project 67</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Web Photobooth</h1>
+            <p>Akses kamera dan ambil foto instan</p>
+        </header>
+
+        <div class="booth-container">
+            <div id="flash-overlay" class="flash"></div>
+            <div class="video-wrap">
+                <video id="video-feed" autoplay playsinline></video>
+                <div id="camera-placeholder" class="placeholder">
+                    <button id="start-btn" class="btn primary">Buka Kamera</button>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="shutter-btn" class="shutter-btn" disabled title="Ambil Foto">
+                    <div class="inner-circle"></div>
+                </button>
+                <button id="stop-btn" class="btn secondary" style="display: none;">Tutup Kamera</button>
+            </div>
+        </div>
+
+        <div class="gallery-section">
+            <h3>Galeri Foto</h3>
+            <div id="gallery" class="gallery">
+                <!-- Captured photos will appear here -->
+            </div>
+        </div>
+
+        <canvas id="capture-canvas" style="display: none;"></canvas>
+
+        <footer class="project-footer">
+            Project 67 / 100 &mdash; getUserMedia & Canvas API
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
