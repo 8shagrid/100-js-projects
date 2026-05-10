@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Chat | Project 74</title>
+    <meta name="description" content="A premium real-time chat application using native WebSockets.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <span>WS Chat</span>
+                </div>
+            </div>
+
+            <div class="sidebar-content">
+                <div class="setting-group">
+                    <label>Connection URL</label>
+                    <input type="text" id="wsUrl" value="wss://ws.postman-echo.com/raw" placeholder="wss://...">
+                </div>
+                
+                <div class="setting-group">
+                    <label>Your Nickname</label>
+                    <input type="text" id="username" value="Guest User" placeholder="Enter nickname...">
+                </div>
+
+                <div class="status-box">
+                    <div class="status-indicator" id="statusCircle"></div>
+                    <span id="statusText">Disconnected</span>
+                </div>
+
+                <button id="connectBtn" class="btn-sidebar">Connect</button>
+            </div>
+
+            <div class="sidebar-footer">
+                <p>Project 74: Real-time Communication</p>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-area">
+            <header class="chat-header">
+                <div class="chat-info">
+                    <h2 id="currentChat">Public Channel</h2>
+                    <p id="participantCount">1 participant</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn-icon" id="clearChat" title="Clear Chat">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 6L6 19M6 6l13 13"></path>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <div class="messages-container" id="messagesContainer">
+                <div class="system-message">Welcome to WS Chat! Connect to a server to start messaging.</div>
+                <!-- Messages will appear here -->
+            </div>
+
+            <footer class="input-area">
+                <form id="messageForm" class="message-form">
+                    <input type="text" id="messageInput" placeholder="Type a message..." autocomplete="off" disabled>
+                    <button type="submit" id="sendBtn" class="btn-send" disabled>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </form>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
