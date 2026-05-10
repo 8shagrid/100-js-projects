@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Drawing App | Project 75</title>
+    <meta name="description" content="A premium minimalist drawing application built with HTML5 Canvas.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Floating Toolbar -->
+        <nav class="toolbar">
+            <div class="tool-group">
+                <button class="tool-btn active" id="brushTool" title="Brush">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                        <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                        <path d="M2 2l5 2"></path>
+                        <path d="M2 2l2 5"></path>
+                    </svg>
+                </button>
+                <button class="tool-btn" id="eraserTool" title="Eraser">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 20H7L3 16C2 15 2 13 3 12L13 2C14 1 16 1 17 2L21 6C22 7 22 9 21 10L11 20"></path>
+                        <path d="M17 2L21 6"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="tool-group">
+                <div class="color-picker-wrapper">
+                    <input type="color" id="colorPicker" value="#3b82f6" title="Pick Color">
+                    <div class="color-preview" id="colorPreview"></div>
+                </div>
+                <div class="brush-size-wrapper">
+                    <input type="range" id="sizeSlider" min="1" max="50" value="5" title="Brush Size">
+                    <span id="sizeLabel">5px</span>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="tool-group">
+                <button class="tool-btn secondary" id="undoBtn" title="Undo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 14L4 9l5-5"></path>
+                        <path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5v0a5.5 5.5 0 0 1-5.5 5.5H11"></path>
+                    </svg>
+                </button>
+                <button class="tool-btn secondary" id="clearBtn" title="Clear Canvas">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                    </svg>
+                </button>
+                <button class="tool-btn primary" id="saveBtn" title="Save Drawing">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Canvas Area -->
+        <main class="canvas-wrapper">
+            <canvas id="mainCanvas"></canvas>
+        </main>
+
+        <!-- Cursor Preview -->
+        <div id="brushCursor" class="brush-cursor"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

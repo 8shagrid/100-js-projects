@@ -1,0 +1,203 @@
+:root {
+    --bg-dark: #0f172a;
+    --bg-canvas: #ffffff;
+    --toolbar-bg: rgba(15, 23, 42, 0.85);
+    --accent: #3b82f6;
+    --accent-hover: #2563eb;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border: rgba(255, 255, 255, 0.1);
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+    --font-main: 'Inter', sans-serif;
+    --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    height: 100vh;
+    overflow: hidden;
+    cursor: none; /* Hide default cursor to use custom brush preview */
+}
+
+.app-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Toolbar Styling */
+.toolbar {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--toolbar-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 100;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.toolbar:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.tool-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.divider {
+    width: 1px;
+    height: 24px;
+    background-color: var(--border);
+}
+
+.tool-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tool-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.tool-btn.active {
+    background-color: var(--accent);
+    color: white;
+}
+
+.tool-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.tool-btn.primary {
+    background-color: var(--accent);
+    color: white;
+}
+
+.tool-btn.primary:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Color Picker */
+.color-picker-wrapper {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+#colorPicker {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.color-preview {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--border);
+}
+
+/* Brush Size */
+.brush-size-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 8px;
+}
+
+#sizeSlider {
+    width: 100px;
+    cursor: pointer;
+    accent-color: var(--accent);
+}
+
+#sizeLabel {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    min-width: 35px;
+}
+
+/* Canvas Area */
+.canvas-wrapper {
+    flex: 1;
+    background-color: var(--bg-canvas);
+    position: relative;
+    overflow: hidden;
+}
+
+#mainCanvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+/* Custom Brush Cursor */
+.brush-cursor {
+    position: fixed;
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    background-color: rgba(59, 130, 246, 0.3); /* Default blue tint */
+    border-radius: 50%;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8);
+    transition: background-color 0.2s ease;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .toolbar {
+        bottom: 24px;
+        top: auto;
+        padding: 6px 12px;
+        width: 90%;
+        border-radius: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #sizeSlider {
+        width: 60px;
+    }
+}
