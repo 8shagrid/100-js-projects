@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech - Project 64</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Text to Speech</h1>
+            <p>Ubah teks Anda menjadi suara dengan berbagai pilihan suara</p>
+        </header>
+
+        <div class="card">
+            <textarea id="text-input" placeholder="Masukkan teks yang ingin diucapkan...">Halo! Ini adalah demonstrasi Speech Synthesis dalam JavaScript. Selamat mencoba!</textarea>
+            
+            <div class="settings">
+                <div class="control-group">
+                    <label>Pilih Suara</label>
+                    <select id="voice-select">
+                        <option value="">Mengambil suara...</option>
+                    </select>
+                </div>
+
+                <div class="sliders">
+                    <div class="control-group">
+                        <label>Kecepatan (Rate)</label>
+                        <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1">
+                        <span id="rate-val">1</span>
+                    </div>
+                    <div class="control-group">
+                        <label>Nada (Pitch)</label>
+                        <input type="range" id="pitch" min="0" max="2" step="0.1" value="1">
+                        <span id="pitch-val">1</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="speak-btn" class="btn primary">Dengarkan</button>
+                <button id="stop-btn" class="btn secondary">Berhenti</button>
+            </div>
+        </div>
+
+        <footer class="project-footer">
+            Project 64 / 100 &mdash; Web Speech Synthesis API
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

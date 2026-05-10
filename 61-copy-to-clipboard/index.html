@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy to Clipboard - Project 61</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Copy to Clipboard</h1>
+            <p>Masukkan teks dan salin dengan satu klik</p>
+        </header>
+
+        <div class="card">
+            <textarea id="text-input" placeholder="Ketik atau tempel sesuatu di sini..."></textarea>
+            
+            <div class="actions">
+                <button id="copy-btn" class="btn primary">
+                    <span>Salin Teks</span>
+                </button>
+                <button id="clear-btn" class="btn secondary">Hapus</button>
+            </div>
+        </div>
+
+        <div id="toast" class="toast">Teks berhasil disalin!</div>
+
+        <footer class="project-footer">
+            Project 61 / 100 &mdash; Copy to Clipboard
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

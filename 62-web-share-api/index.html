@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Share API - Project 62</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="share-card">
+            <header>
+                <h1>Native Share Tool</h1>
+                <p>Bagikan konten menggunakan dialog sistem</p>
+            </header>
+
+            <div class="form-group">
+                <label>Judul</label>
+                <input type="text" id="share-title" placeholder="Masukkan judul..." value="Lihat Proyek Keren Ini!">
+            </div>
+
+            <div class="form-group">
+                <label>Deskripsi</label>
+                <textarea id="share-text" placeholder="Masukkan pesan singkat...">Saya baru saja menemukan koleksi 100 Proyek JavaScript yang sangat menginspirasi!</textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Link / URL</label>
+                <input type="url" id="share-url" placeholder="https://..." value="https://github.com/8shagrid/100-js-projects">
+            </div>
+
+            <button id="share-btn" class="share-btn">
+                <span>Bagikan Sekarang</span>
+            </button>
+
+            <div id="status" class="status-msg"></div>
+        </div>
+
+        <footer class="project-footer">
+            Project 62 / 100 &mdash; Web Share API
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

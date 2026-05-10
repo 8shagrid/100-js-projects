@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation Tracker - Project 65</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+</head>
+<body>
+    <div class="container">
+        <div id="map" class="map-view"></div>
+
+        <div class="control-panel">
+            <header>
+                <h1>Where am I?</h1>
+                <p>Temukan koordinat lokasi Anda saat ini</p>
+            </header>
+
+            <button id="get-location-btn" class="btn primary">Cari Lokasi Saya</button>
+
+            <div id="info-box" class="info-box" style="display: none;">
+                <div class="data-item">
+                    <label>Latitude</label>
+                    <span id="lat">-</span>
+                </div>
+                <div class="data-item">
+                    <label>Longitude</label>
+                    <span id="long">-</span>
+                </div>
+                <div class="data-item">
+                    <label>Akurasi</label>
+                    <span id="accuracy">-</span>
+                </div>
+                
+                <a id="gmaps-link" href="#" target="_blank" class="btn secondary">Buka di Google Maps</a>
+            </div>
+
+            <div id="status" class="status-msg"></div>
+        </div>
+
+        <footer class="project-footer">
+            Project 65 / 100 &mdash; Geolocation API & Leaflet.js
+        </footer>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+</html>
