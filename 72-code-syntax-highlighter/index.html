@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Highlighter - Project 72</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Prism.js Theme -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Code Syntax Highlighter</h1>
+            <p>Ubah kode mentah Anda menjadi blok kode yang cantik</p>
+        </header>
+
+        <div class="editor-container">
+            <div class="toolbar">
+                <select id="language-select">
+                    <option value="javascript">JavaScript</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="python">Python</option>
+                    <option value="json">JSON</option>
+                </select>
+                <button id="copy-btn" class="btn outline">Salin Kode</button>
+            </div>
+
+            <div class="main-grid">
+                <div class="input-pane">
+                    <label>Raw Code</label>
+                    <textarea id="code-input" placeholder="Tempel kode Anda di sini..."></textarea>
+                </div>
+                <div class="output-pane">
+                    <label>Highlighted</label>
+                    <pre><code id="code-output" class="language-javascript"></code></pre>
+                </div>
+            </div>
+        </div>
+
+        <footer class="project-footer">
+            Project 72 / 100 &mdash; Prism.js Integration
+        </footer>
+    </div>
+
+    <!-- Prism.js Core & Languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

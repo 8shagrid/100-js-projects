@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Preview - Project 71</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Marked.js for Markdown Parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <h1>Markdown Live</h1>
+                <p>Editor & Previewer Real-time</p>
+            </div>
+            <div class="toolbar">
+                <button id="clear-btn" class="btn secondary">Hapus Semua</button>
+                <button id="copy-btn" class="btn primary">Salin HTML</button>
+            </div>
+        </header>
+
+        <main class="editor-layout">
+            <section class="pane editor-pane">
+                <div class="pane-label">MARKDOWN</div>
+                <textarea id="editor" placeholder="Tulis markdown di sini..."></textarea>
+            </section>
+            <section class="pane preview-pane">
+                <div class="pane-label">PREVIEW</div>
+                <div id="preview" class="preview-content"></div>
+            </section>
+        </main>
+
+        <footer class="project-footer">
+            Project 71 / 100 &mdash; Marked.js & split-screen layout
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
