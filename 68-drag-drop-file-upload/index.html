@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop Upload - Project 68</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>File Uploader</h1>
+            <p>Tarik dan lepas file Anda untuk mulai mengunggah</p>
+        </header>
+
+        <div class="upload-card">
+            <div id="drop-zone" class="drop-zone">
+                <div class="icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                </div>
+                <p>Seret file ke sini atau <span>klik untuk memilih</span></p>
+                <input type="file" id="file-input" hidden multiple>
+            </div>
+
+            <div id="file-list" class="file-list">
+                <!-- Upload items will appear here -->
+            </div>
+        </div>
+
+        <footer class="project-footer">
+            Project 68 / 100 &mdash; Drag & Drop & FileReader API
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
