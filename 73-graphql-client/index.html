@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraphQL Client | Project 73</title>
+    <meta name="description" content="A premium, minimalist GraphQL client for testing and debugging APIs.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Prism.js for Syntax Highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                    <span>GQL Client</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-content">
+                <h3>Templates</h3>
+                <ul class="template-list" id="templateList">
+                    <li data-endpoint="https://countries.trevorblades.com/" data-query='query { countries { name code emoji } }'>Countries (All)</li>
+                    <li data-endpoint="https://countries.trevorblades.com/" data-query='query { country(code: "ID") { name native capital currency } }'>Country Detail (ID)</li>
+                    <li data-endpoint="https://rickandmortyapi.com/graphql" data-query='query { characters(page: 1) { results { name status species } } }'>Rick & Morty</li>
+                    <li data-endpoint="https://spacex-api.herokuapp.com/graphql" data-query='query { launchesPast(limit: 5) { mission_name launch_date_local } }'>SpaceX Launches</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-footer">
+                <p>Project 73</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="endpoint-input">
+                    <span class="method">POST</span>
+                    <input type="text" id="endpointUrl" placeholder="https://api.graphql.com" value="https://countries.trevorblades.com/">
+                </div>
+                <button id="runBtn" class="btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 3l14 9-14 9V3z"></path>
+                    </svg>
+                    Run Query
+                </button>
+            </header>
+
+            <div class="editor-container">
+                <!-- Query Editor -->
+                <div class="pane query-pane">
+                    <div class="pane-header">
+                        <span>Query</span>
+                        <button class="btn-icon" id="clearBtn" title="Clear Query">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 6L6 19M6 6l13 13"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="editor-wrapper">
+                        <textarea id="queryEditor" spellcheck="false">query {
+  countries {
+    name
+    code
+    emoji
+  }
+}</textarea>
+                    </div>
+                </div>
+
+                <!-- Response Pane -->
+                <div class="pane response-pane">
+                    <div class="pane-header">
+                        <span>Response</span>
+                        <div class="pane-actions">
+                            <span id="statusIndicator" class="status-badge">Idle</span>
+                            <button class="btn-icon" id="copyBtn" title="Copy Response">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M8 17.7L2 12l6-5.7M16 17.7l6-5.7-6-5.7M12 12v.01"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="response-wrapper">
+                        <pre><code id="responseBody" class="language-json">{}</code></pre>
+                        <div id="loader" class="loader-overlay hidden">
+                            <div class="spinner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
