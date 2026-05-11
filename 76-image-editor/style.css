@@ -280,6 +280,15 @@ main {
     opacity: 0.2;
 }
 
+.project-footer {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+    background: rgba(15, 23, 42, 0.5);
+}
+
 /* Responsive */
 @media (max-width: 900px) {
     .app-container {

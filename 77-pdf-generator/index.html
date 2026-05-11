@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuCraft | Premium PDF Generator</title>
+    <meta name="description" content="Generate high-quality PDF documents directly in your browser with DocuCraft.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- html2pdf.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-file-pdf"></i>
+                <h1>Docu<span>Craft</span></h1>
+            </div>
+            <div class="actions">
+                <button id="download-btn" class="primary-btn">
+                    <i class="fas fa-file-export"></i> Generate PDF
+                </button>
+            </div>
+        </header>
+
+        <div class="editor-shell">
+            <aside class="toolbar">
+                <div class="tool-group">
+                    <button class="tool-btn" data-command="bold" title="Bold"><i class="fas fa-bold"></i></button>
+                    <button class="tool-btn" data-command="italic" title="Italic"><i class="fas fa-italic"></i></button>
+                    <button class="tool-btn" data-command="underline" title="Underline"><i class="fas fa-underline"></i></button>
+                </div>
+                
+                <div class="tool-separator"></div>
+
+                <div class="tool-group">
+                    <button class="tool-btn" data-command="justifyLeft" title="Align Left"><i class="fas fa-align-left"></i></button>
+                    <button class="tool-btn" data-command="justifyCenter" title="Align Center"><i class="fas fa-align-center"></i></button>
+                    <button class="tool-btn" data-command="justifyRight" title="Align Right"><i class="fas fa-align-right"></i></button>
+                </div>
+
+                <div class="tool-separator"></div>
+
+                <div class="tool-group">
+                    <select id="font-size" class="tool-select">
+                        <option value="3">Small</option>
+                        <option value="4" selected>Normal</option>
+                        <option value="5">Medium</option>
+                        <option value="6">Large</option>
+                        <option value="7">Extra Large</option>
+                    </select>
+                </div>
+
+                <div class="tool-separator"></div>
+
+                <div class="tool-group">
+                    <input type="color" id="text-color" class="tool-color" title="Text Color">
+                </div>
+            </aside>
+
+            <main class="canvas-area">
+                <div id="document-canvas" class="document-canvas" contenteditable="true">
+                    <h1>Title Here</h1>
+                    <p>Start typing your content here...</p>
+                </div>
+            </main>
+        </div>
+        <footer class="project-footer">
+            Project 77 / 100 &mdash; DocuCraft
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
