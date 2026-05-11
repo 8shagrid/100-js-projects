@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Edit | Premium Image Editor</title>
+    <meta name="description" content="A premium, browser-based image editor with real-time filters and transformations.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-wand-magic-sparkles"></i>
+                <h1>Lumina<span>Edit</span></h1>
+            </div>
+            <div class="actions">
+                <button id="reset-btn" class="secondary-btn" title="Reset all changes">
+                    <i class="fas fa-undo"></i> Reset
+                </button>
+                <button id="save-btn" class="primary-btn" title="Download image">
+                    <i class="fas fa-download"></i> Save Image
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <aside class="sidebar">
+                <section class="control-group">
+                    <h3><i class="fas fa-sliders"></i> Adjustments</h3>
+                    <div class="filter-options">
+                        <div class="filter-item active" data-filter="brightness">
+                            <span>Brightness</span>
+                            <span class="value">100%</span>
+                        </div>
+                        <div class="filter-item" data-filter="saturation">
+                            <span>Saturation</span>
+                            <span class="value">100%</span>
+                        </div>
+                        <div class="filter-item" data-filter="contrast">
+                            <span>Contrast</span>
+                            <span class="value">100%</span>
+                        </div>
+                        <div class="filter-item" data-filter="inversion">
+                            <span>Inversion</span>
+                            <span class="value">0%</span>
+                        </div>
+                        <div class="filter-item" data-filter="grayscale">
+                            <span>Grayscale</span>
+                            <span class="value">0%</span>
+                        </div>
+                    </div>
+                    <div class="slider-container">
+                        <input type="range" id="filter-slider" min="0" max="200" value="100">
+                    </div>
+                </section>
+
+                <section class="control-group">
+                    <h3><i class="fas fa-rotate"></i> Rotate & Flip</h3>
+                    <div class="transform-btns">
+                        <button id="rotate-left" title="Rotate Left"><i class="fas fa-rotate-left"></i></button>
+                        <button id="rotate-right" title="Rotate Right"><i class="fas fa-rotate-right"></i></button>
+                        <button id="flip-horizontal" title="Flip Horizontal"><i class="fas fa-arrows-left-right"></i></button>
+                        <button id="flip-vertical" title="Flip Vertical"><i class="fas fa-arrows-up-down"></i></button>
+                    </div>
+                </section>
+
+                <section class="upload-section">
+                    <input type="file" id="file-input" accept="image/*" hidden>
+                    <button id="choose-img-btn" class="upload-btn">
+                        <i class="fas fa-cloud-upload-alt"></i> Choose Image
+                    </button>
+                </section>
+            </aside>
+
+            <div class="preview-area">
+                <div class="img-container">
+                    <img id="preview-img" src="placeholder.jpg" alt="Preview Image" class="placeholder-img">
+                    <div id="upload-prompt" class="upload-prompt">
+                        <i class="fas fa-image"></i>
+                        <p>Upload an image to start editing</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
